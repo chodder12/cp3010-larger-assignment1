@@ -1,15 +1,31 @@
 import './App.css';
-import MovieReviewPage from './pages/movie_reviews';
-import SubmitReviewPage from './pages/submit_reviews';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import NavBar from './NavBar';
+import SubmitReviews from './pages/SubmitReviews';
+import MovieReviewsListPage from './pages/MovieReviewsListPage';
+import MovieReviews from './pages/MovieReviews';
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
+    <div ClassName="App">
 
-      <h1> movie review page</h1>
+      <NavBar/>
+      <div id = "page-body">
+      <Routes>
 
+      <Route path="/SubmitReviews" element={<SubmitReviews/>} />
+      <Route path="/MovieReviews" element={<MovieReviewsListPage/>} />
+      <Route path="/MovieReviews/:MovieReviewID" element={<MovieReviews/>} />
       
+
+      </Routes>
+       
+
+      </div>
     </div>
+    </BrowserRouter>
+   
   );
 }
 
