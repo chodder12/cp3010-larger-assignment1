@@ -9,12 +9,20 @@ const MovieReviewsListPage = () => {
             <Link key={movie.id} to={`/MovieReviews/${movie.id}`}>
                 <h3>{movie.title}</h3>
                 <p>{movie.actors}</p>
+
+                <button onClick={() => handleMovieDelete(movie)}>delete</button>
+                
+                
             </Link>
         ))}    
         </>
-        
-        
+
     );
 }
+
+const handleMovieDelete = (movie) => {
+    const newMovieList = movieList.filter((m) => m.id !== movie.id);
+    setMovieList(newMovieList);
+  };
 
 export default MovieReviewsListPage;

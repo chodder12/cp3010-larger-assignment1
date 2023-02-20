@@ -4,6 +4,9 @@ import NavBar from './NavBar';
 import SubmitReviews from './pages/SubmitReviews';
 import MovieReviewsListPage from './pages/MovieReviewsListPage';
 import MovieReviews from './pages/MovieReviews';
+import React ,{ useState } from 'react';
+import movies from './pages/movies';
+ 
 
 function App() {
   return (
@@ -28,5 +31,8 @@ function App() {
    
   );
 }
+
+
+
 
 export default App;
