@@ -24,11 +24,12 @@ export function LeaveReview(props) {
     return (
         <>
         <Link to="/">Home</Link>
-        <form onSubmit={submit}>
+        <form method="post" >
             <input
+            name="title"
             ref = {movieTitle}
             type = "text"/>
-            <button>ADD</button>
+            <input type="submit" value="submit"/>
         </form>
         </>
     )};
